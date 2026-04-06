@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html, body {
+    @apply overflow-hidden bg-slate-950;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+  }
+
+  input {
+    user-select: text;
+    touch-action: auto;
+  }
+}
+
+@layer components {
+  .game-container {
+    @apply max-w-md mx-auto h-screen relative shadow-2xl bg-gradient-to-b from-indigo-900 to-slate-950 overflow-hidden;
+  }
+}
